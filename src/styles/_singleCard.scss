@@ -1,0 +1,22 @@
+.singleCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .cardPosition {     
+      font-size: smaller;
+      color: $light;
+    }
+    .cardPic {
+      max-height: 6em;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      padding: .5px;
+      box-shadow: 0 4px 8px 0 $dark,
+        0 6px 20px 0 $dark;
+    }  
+    .cardNumber {
+        color: $light;
+        text-shadow: 3px 3spx $dark;
+        
+    } 
+  }
