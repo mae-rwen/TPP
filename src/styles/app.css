@@ -1,4 +1,66 @@
 @charset "UTF-8";
+@media only screen and (min-width: 600px) {
+  .lifeCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .lifeCard .lifeCardPic {
+    width: 20em !important;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 0.5px;
+    box-shadow: 3px 3px 3px 0px #61447e, 5px 5px 7px 0px #61447e;
+  }
+  #gridOne {
+    display: flex;
+    flex-direction: row;
+    max-width: 60% !important;
+    margin: auto;
+    gap: 1em;
+  }
+}
+@media only screen and (min-width: 900px) {
+  .singleCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .singleCard .cardPosition {
+    font-size: smaller;
+  }
+  .singleCard .cardPic {
+    max-height: 10em !important;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 0.5px;
+    box-shadow: 4px 4px 3px 0px #61447e, 6px 6px 7px 0px #61447e;
+  }
+  #tppHeader {
+    text-align: center;
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+    overflow: hidden;
+    border-radius: 0 0 85% 85%/10%;
+    padding: 10em 20em !important;
+    margin-bottom: 30vh;
+    color: rgba(191, 177, 244, 0.4039215686);
+    background-image: linear-gradient(135deg, #a484c7 10%, rgba(245, 243, 255, 0.5803921569) 50%);
+  }
+  #tppHeader h5, #tppHeader .h5,
+  #tppHeader h3,
+  #tppHeader .h3 {
+    color: white;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  }
+  #tppHeader p {
+    text-shadow: 1px 1px 1px #333;
+    margin: 2em auto;
+  }
+}
 #tppHeader {
   text-align: center;
   width: 100%;
@@ -13,7 +75,9 @@
   color: rgba(191, 177, 244, 0.4039215686);
   background-image: linear-gradient(135deg, #a484c7 10%, rgba(245, 243, 255, 0.5803921569) 50%);
 }
-#tppHeader h5, #tppHeader .h5, #tppHeader h3, #tppHeader .h3 {
+#tppHeader h5, #tppHeader .h5,
+#tppHeader h3,
+#tppHeader .h3 {
   color: white;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
@@ -50,36 +114,51 @@
   font-style: italic;
   font-size: small;
 }
+#dateFormSpan .dateForm .dateFormBtns {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 0.5em;
+}
 
-#doniczka {
+#gridSpan {
+  width: 100%;
+  padding-bottom: 3em;
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+  overflow: hidden;
+  border-radius: 0 0 85% 85%/10%;
+  background-image: linear-gradient(135deg, #a484c7 10%, rgba(245, 243, 255, 0.5803921569) 50%);
+}
+#gridSpan #doniczka {
   flex: 1;
   display: flex;
   flex-direction: column;
 }
-#doniczka .doniczkasRows:first-of-type {
+#gridSpan #doniczka .doniczkasRows:first-of-type {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
-#doniczka .doniczkasRows:nth-of-type(2n) {
+#gridSpan #doniczka .doniczkasRows:nth-of-type(2n) {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
 }
-#doniczka .doniczkasRows:nth-of-type(3n) {
+#gridSpan #doniczka .doniczkasRows:nth-of-type(3n) {
   display: flex;
   flex-direction: row;
   justify-content: center;
   gap: 2em;
 }
-#doniczka #position8 {
+#gridSpan #doniczka #position8 {
   display: flex;
   flex-direction: row;
   justify-content: center;
   padding-left: 5em;
 }
-
-#doniczkasSide {
+#gridSpan #doniczkasSide {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -87,6 +166,19 @@
   gap: 7em;
   padding-top: 5em;
 }
+#gridSpan #portraitTitle {
+  padding-top: 2em;
+  margin-bottom: 1em;
+  text-align: center;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  color: white;
+}
+#gridSpan .gridBtns {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
 .singleCard {
   display: flex;
   flex-direction: column;
@@ -106,8 +198,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 60vh;
-  margin-bottom: 30vh;
 }
 .lifeCard .lifeCardPic {
   width: 70vw;
@@ -10942,12 +11032,13 @@ body {
 
 .App {
   margin: auto;
-  margin-bottom: 30vh;
 }
 .App #lifeCard {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  height: 60vh;
+  margin-bottom: 30vh;
 }
 .App #gridOne {
   display: flex;
@@ -10964,4 +11055,5 @@ body {
   height: 5vh;
   background-size: cover;
   padding: 3em;
+  margin-top: 3em;
 }/*# sourceMappingURL=app.css.map */

@@ -16,7 +16,7 @@
     align-items: center;
     // max-width: 10em;
     padding-top: 3em;
-    gap: .25em;
+    gap: 0.25em;
     .pickDate {
       //  border: $border1;
       background: $light;
@@ -27,6 +27,12 @@
       color: $warning;
       font-style: italic;
       font-size: small;
+    }
+    .dateFormBtns {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      gap: 0.5em;
     }
   }
 }

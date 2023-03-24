@@ -125,7 +125,11 @@ export default function LifeCard({ number, position }) {
     <>
       <Figure className="lifeCard">
         <Figure.Caption className="lifeCardPosition">{position}</Figure.Caption>
-        <Figure.Image className="lifeCardPic" src={cardPic} alt="card depiction" />
+        <Figure.Image
+          className="lifeCardPic"
+          src={cardPic}
+          alt="card depiction"
+        />
         <Figure.Caption className="text-center lifeCardNumber">
           <strong>{cardNumber}</strong>
         </Figure.Caption>

@@ -5,16 +5,21 @@ import { Button } from "react-bootstrap";
 
 export default function TPP() {
   const [birthDate, setBirthDate] = useState("");
-  const ref = useRef(null);
-  const handleClick = () => {
-    ref.current?.scrollIntoView({ behavior: "smooth" });
+  const [dateSubmitted, setDateSubmitted] = useState(false);
+  const goToDateForm = useRef(null);
+  const goToPortrait = useRef(null);
+  const handleGoToDateForm = () => {
+    goToDateForm.current?.scrollIntoView({ behavior: "smooth" });
+  };
+  const handleGoToPortrait = () => {
+    goToPortrait.current?.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
     <>
       <div id="tppHeader">
         <h3>✨ Tarot ✨</h3>
-        <h5>Psychological Portrait </h5>
+        <h5>Psychological Portrait</h5>
         <p>
           It's used to examine and analyze the innate potentials of a given
           individual, their talents and predispositions, the influences they
@@ -27,15 +32,27 @@ export default function TPP() {
           numbers resulting from the date of birth allows one to see something
           like a genetic code with which a person comes into the world.
         </p>
-        <Button variant="danger" onClick={handleClick}>
+        <Button variant="danger" onClick={handleGoToDateForm}>
           START
         </Button>
       </div>
-    
-      <div id="dateFormSpan" ref={ref}>
-        <DateForm birthDate={birthDate} setBirthDate={setBirthDate} />
+
+      <div id="dateFormSpan" ref={goToDateForm}>
+        <DateForm
+          birthDate={birthDate}
+          setBirthDate={setBirthDate}
+          dateSubmitted={dateSubmitted}
+          setDateSubmitted={setDateSubmitted}
+          handleGoToPortrait={handleGoToPortrait}
+        />
       </div>
-      <Grid birthDate={birthDate} />
+
+      <Grid
+        birthDate={birthDate}
+        dateSubmitted={dateSubmitted}
+        goToPortrait={goToPortrait}
+        handleGoToDateForm={handleGoToDateForm}
+      />
     </>
   );
 }

@@ -13,10 +13,13 @@ $danger: #68324a;
 $light: #f5f3ff94;
 $dark: #360f2a;
 
-@import "./header";
+
+@import "./mediaQueries";
+@import "./tppHeader";
 @import "./dateForm";
 @import "./doniczka";
 @import "./singleCard";
+
 
 @import "../../node_modules/bootstrap/scss/bootstrap";
 
@@ -26,29 +29,31 @@ body {
 
 .App {
   // border: $border1;
-  margin: auto; 
-  margin-bottom: 30vh;
-  
+  margin: auto;
+
   #lifeCard {
     display: flex;
     flex-direction: row;
-    justify-content: center;    
-  } 
+    justify-content: center;
+    height: 60vh;
+    margin-bottom: 30vh;
+  }
   #gridOne {
     // border: $border3;
     display: flex;
     flex-direction: row;
     max-width: 90%;
-    margin: auto;   
-    gap: 1em;       
+    margin: auto;
+    gap: 1em;
   }
 }
 
-#footerDiv { 
+#footerDiv {
   bottom: 0;
-  width: 100%;  
+  width: 100%;
   background-image: linear-gradient(135deg, $secondary 10%, $light 50%);
   height: 5vh;
   background-size: cover;
   padding: 3em;
+  margin-top: 3em;
 }

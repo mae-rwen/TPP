@@ -1,8 +1,13 @@
-import { Card } from "react-bootstrap";
+import { Button } from "react-bootstrap";
 import LifeCard from "./LifeCards";
 import SingleCard from "./SingleCard";
 
-export default function Grid({ birthDate }) {
+export default function Grid({
+  birthDate,
+  dateSubmitted,
+  goToPortrait,
+  handleGoToDateForm,
+}) {
   const [year, month, day] = birthDate.split("-");
 
   // get sum of cards between 1-22
@@ -80,39 +85,56 @@ export default function Grid({ birthDate }) {
   return (
     <>
       <div id="lifeCard">
-        <LifeCard number={theLifeCard} position={"Life card"} />
+        <LifeCard
+          number={dateSubmitted ? theLifeCard : null}
+          position={"Life card"}
+        />
       </div>
+      {dateSubmitted ? (
+        <div id="gridSpan">
+          <h4 id="portraitTitle" ref={goToPortrait}>
+            TPP for {birthDate}
+          </h4>
+          <div className="gridBtns mb-2">
+            <Button variant="secondary" onClick={handleGoToDateForm}>
+              Back
+            </Button>
+          </div>
+          <div id="gridOne" className="p-3">
+            <div id="doniczka">
+              <div className="doniczkasRows">
+                <SingleCard number={thirteenth} position={"p.13"} />
+                <SingleCard number={fourteenth} position={"p.14"} />
+              </div>
+              <div className="doniczkasRows">
+                <SingleCard number={first} position={"p.1"} />
+                <SingleCard number={second} position={"p.2"} />
+                <SingleCard number={third} position={"p.3"} />
+              </div>
+              <div className="doniczkasRows">
+                <SingleCard number={fourth} position={"p.4"} />
+                <SingleCard number={fifth} position={"p.5"} />
+              </div>
+              <div className="doniczkasRows">
+                <SingleCard number={sixth} position={"p.6"} />
+              </div>
+              <div className="doniczkasRows" id="position8">
+                <SingleCard number={eighth} position={"p.8"} />
+              </div>
+            </div>
 
-      <div id="gridOne" className="p-3">
-        <div id="doniczka">
-          <div className="doniczkasRows">
-            <SingleCard number={thirteenth} position={"p.13"} />
-            <SingleCard number={fourteenth} position={"p.14"} />
+            <div id="doniczkasSide">
+              <SingleCard number={seventh} position={"p.7"} />
+              <span id="position12">
+                <SingleCard number={twelve} position={"p.12"} />
+              </span>
+            </div>
           </div>
-          <div className="doniczkasRows">
-            <SingleCard number={first} position={"p.1"} />
-            <SingleCard number={second} position={"p.2"} />
-            <SingleCard number={third} position={"p.3"} />
-          </div>
-          <div className="doniczkasRows">
-            <SingleCard number={fourth} position={"p.4"} />
-            <SingleCard number={fifth} position={"p.5"} />
-          </div>
-          <div className="doniczkasRows">
-            <SingleCard number={sixth} position={"p.6"} />
-          </div>
-          <div className="doniczkasRows" id="position8">
-            <SingleCard number={eighth} position={"p.8"} />
+          <div className="gridBtns">
+            <Button onClick={handleGoToDateForm}>Back</Button>
           </div>
         </div>
-
-        <div id="doniczkasSide">
-          <SingleCard number={seventh} position={"p.7"} />
-          <span id="position12">
-            <SingleCard number={twelve} position={"p.12"} />
-          </span>
-        </div>
-      </div>
+      ) : null}
     </>
   );
 }
