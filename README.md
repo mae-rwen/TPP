@@ -1,6 +1,6 @@
 # Tarot Psychological Portrait
 
-##You can see the application at (http://tarot.maerwen.pl/)
+## You can see the application at (http://tarot.maerwen.pl/)
 
 Tarot psychological portrait (TPP for short) is the author's method of working with tarot, created by the well-known and respected Alla Alicja Chrzanowska.
 
@@ -10,4 +10,4 @@ This method is taught in workshops, and the meaning of each item is explained th
 
 The purpose of this application is to calculate individual portraits in an easy and fun way.
 
-###This project was bootstrapped with [Create React App](http://tarot.maerwen.pl/).
+### This project was bootstrapped with [Create React App](http://tarot.maerwen.pl/).
