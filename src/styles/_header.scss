@@ -1,0 +1,22 @@
+#tppHeader {
+  text-align: center;
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+  overflow: hidden;
+  border-radius: 0 0 85% 85% / 10%;
+  padding: 10em 3em;
+  margin-bottom: 30vh;
+  color: $primary;
+  background-image: linear-gradient(135deg, $secondary 10%, $light 50%);
+  h5, h3 {
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  }
+  p {
+    text-shadow: 1px 1px 1px #333;
+    margin: 2em auto;
+  }
+}

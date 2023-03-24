@@ -1,0 +1,44 @@
+#doniczka {
+    // border: $border4;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    .doniczkasRows {
+      // border: $border5;
+      &:first-of-type {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+      }
+      &:nth-of-type(2n) {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+      }
+      &:nth-of-type(3n) {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 2em;
+      }
+    }
+    #position8 {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      padding-left: 5em;
+    }
+  }
+  #doniczkasSide {
+    // border: $border1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 7em;
+    padding-top: 5em;
+    #position12 {
+      // border: $border3;
+      // padding-left: 3em;
+    }
+  }

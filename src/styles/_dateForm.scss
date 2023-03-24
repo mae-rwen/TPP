@@ -1,0 +1,32 @@
+#dateFormSpan {
+  // border: $border1;
+  width: 100%;
+  height: 25vh;
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+  overflow: hidden;
+  border-radius: 0 0 85% 85% / 10%;
+  margin-bottom: 3em;
+  background-image: linear-gradient(135deg, $secondary 10%, $light 50%);
+  .dateForm {
+    // border: $border3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    // max-width: 10em;
+    padding-top: 3em;
+    gap: .25em;
+    .pickDate {
+      //  border: $border1;
+      background: $light;
+      font-style: italic;
+      max-width: 15em;
+    }
+    .uDatePicker {
+      color: $warning;
+      font-style: italic;
+      font-size: small;
+    }
+  }
+}
