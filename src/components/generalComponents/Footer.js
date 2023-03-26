@@ -1,7 +1,13 @@
 export default function Footer() {
   return (
-    <>   
-    <div id="footerDiv"><p>copyright &copy;2023 Maerwen  </p></div>
+    <>
+      <footer>
+        <p>
+          copyright &copy;2023 Maerwen
+          <br />
+          powroze@gmail.com
+        </p>
+      </footer>
     </>
-  )
+  );
 }

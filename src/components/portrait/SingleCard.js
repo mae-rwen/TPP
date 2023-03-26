@@ -123,6 +123,7 @@ export default function SingleCard({ number, position }) {
 
   return (
     <>
+    <div id="singleCardDiv">
       <Figure className="singleCard">
         <Figure.Caption className="cardPosition">{position}</Figure.Caption>
         <Figure.Image className="cardPic" src={cardPic} alt="card depiction" />
@@ -130,6 +131,7 @@ export default function SingleCard({ number, position }) {
           <strong>{cardNumber}</strong>
         </Figure.Caption>
       </Figure>
+      </div>
     </>
   );
 }

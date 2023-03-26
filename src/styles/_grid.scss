@@ -1,0 +1,71 @@
+#gridSpan {
+  background: linear-gradient(
+    148deg,
+    rgba(181, 150, 184, 1) 16%,
+    rgba(177, 147, 183, 1) 48%,
+    rgba(203, 170, 187, 1) 82%
+  );
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  justify-content: center;
+  h4 {
+    text-align: center;
+    font-family: "FairyStrange";
+    padding-top: 3em;
+    line-height: 2em;
+  }
+  button {
+    font-family: "FairyStrange";
+    font-size: small;
+    margin: 2em auto;
+  }
+  #lifeGrid {
+    display: flex;
+    flex-direction: row;
+    width: 65vw;
+    align-items: center;
+    margin-top: 2em;
+    gap: 1em;
+    border: solid 1px $info;
+    border-radius: 10%;
+    padding: 3em 7em;
+    #doniczka {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      .doniczkasRows {
+        &:first-of-type {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+        }
+        &:nth-of-type(2n) {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-around;         
+        }
+        &:nth-of-type(3n) {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-evenly;     
+        }
+      }
+      #position8 {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        padding-left: 5em;
+      }
+    }
+    #doniczkasSide {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 7em;
+      padding-top: 5em;
+    }
+  }  
+}

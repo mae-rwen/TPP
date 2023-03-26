@@ -1,38 +1,42 @@
-#dateFormSpan {
-  // border: $border1;
-  width: 100%;
-  height: 25vh;
-  background-size: cover;
-  background-attachment: fixed;
-  position: relative;
-  overflow: hidden;
-  border-radius: 0 0 85% 85% / 10%;
-  margin-bottom: 3em;
-  background-image: linear-gradient(135deg, $secondary 10%, $light 50%);
+#dateFormDiv {
+  min-height: 40vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
   .dateForm {
-    // border: $border3;
+    background: linear-gradient(
+      148deg,
+      rgba(181, 150, 184, 1) 16%,
+      rgba(177, 147, 183, 1) 48%,
+      rgba(203, 170, 187, 1) 82%
+    );
+    border-radius: 10%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    // max-width: 10em;
-    padding-top: 3em;
-    gap: 0.25em;
-    .pickDate {
-      //  border: $border1;
+    justify-content: center;
+    gap: 0.5em; 
+    padding: 5em 8em;  
+    #dateFormLabel {
+      font-family: "FairyStrange";
+    }
+    .pickDate {      
       background: $light;
-      font-style: italic;
-      max-width: 15em;
-    }
-    .uDatePicker {
-      color: $warning;
-      font-style: italic;
-      font-size: small;
-    }
+      font-style: italic;      
+    }   
     .dateFormBtns {
       display: flex;
       flex-direction: row;
       justify-content: center;
       gap: 0.5em;
+      margin-top: 0.75em;
+      button {
+        font-family: "FairyStrange";
+        font-size: small;
+        padding: 1em;
+      }
     }
   }
 }

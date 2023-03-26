@@ -1,59 +1,51 @@
+@font-face {
+  font-family: "FairyStrange";
+  src: local("FairyStrange"), url("./fonts/FairyStrange.ttf") format("truetype");
+}
+
 $border1: 2px dashed red;
 $border2: 2px dotted rgb(207, 201, 30);
 $border3: 2px dashed rgb(50, 176, 22);
 $border4: 2px dotted rgb(22, 45, 176);
 $border5: 2px dashed rgb(163, 22, 176);
 
-$primary: #bfb1f467;
-$secondary: #a484c7;
-$success: #61447e;
-$info: #61447e;
-$warning: #61447e;
-$danger: #68324a;
-$light: #f5f3ff94;
-$dark: #360f2a;
+$light: #cbaabb;
+$primary: #b193b7;
+$secondary: #401d3e;
+$info: #46404c;
+$dark: #29162a;
 
-
-@import "./mediaQueries";
-@import "./tppHeader";
+// @import "./mediaQueries";
+@import "./TPP";
 @import "./dateForm";
-@import "./doniczka";
+@import "./grid";
 @import "./singleCard";
-
+@import "./lifeCard";
 
 @import "../../node_modules/bootstrap/scss/bootstrap";
 
 body {
-  color: $warning;
+  color: $dark;
 }
 
 .App {
-  // border: $border1;
   margin: auto;
-
-  #lifeCard {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    height: 60vh;
-    margin-bottom: 30vh;
-  }
-  #gridOne {
-    // border: $border3;
-    display: flex;
-    flex-direction: row;
-    max-width: 90%;
-    margin: auto;
-    gap: 1em;
-  }
+  font-family: Georgia, "Times New Roman", Times, serif;
 }
 
-#footerDiv {
+footer {
+  background: linear-gradient(
+    148deg,
+    rgba(181, 150, 184, 1) 16%,
+    rgba(177, 147, 183, 1) 48%,
+    rgba(203, 170, 187, 1) 82%
+  );
   bottom: 0;
-  width: 100%;
-  background-image: linear-gradient(135deg, $secondary 10%, $light 50%);
-  height: 5vh;
-  background-size: cover;
-  padding: 3em;
+  width: 100vw;
+  height: 10vh;
   margin-top: 3em;
+  display: flex;
+  justify-content: flex-end;
+  padding: 2em;
+  color: $info;
 }

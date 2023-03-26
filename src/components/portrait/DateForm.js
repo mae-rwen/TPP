@@ -7,9 +7,11 @@ export default function DateForm({
   dateSubmitted,
   setDateSubmitted,
   handleGoToPortrait,
+  goToDateForm,
 }) {
   return (
     <>
+    <div id="dateFormDiv" ref={goToDateForm}>      
       <Form
         onSubmit={(e) => {
           e.preventDefault();
@@ -26,7 +28,7 @@ export default function DateForm({
         }}
       >
         <Form.Group className="dateForm">
-          <Form.Label>✨✨✨</Form.Label>
+          <Form.Label id="dateFormLabel">⁕ Enter the birthdate ⁕</Form.Label>
           {dateSubmitted ? (
             <Form.Control
               className="text-center pickDate"
@@ -44,15 +46,14 @@ export default function DateForm({
               }}
             />
           )}
-
-          <Form.Text className="uDatePicker">Enter the birthdate</Form.Text>
+          
           <Form.Group className="dateFormBtns">
             {dateSubmitted ? (
               <>
-                <Button variant="danger" onClick={handleGoToPortrait}>
+                <Button variant="secondary" onClick={handleGoToPortrait}>
                   Portrait
                 </Button>
-                <Button variant="secondary" type="submit">
+                <Button variant="info" type="submit">
                   Reset
                 </Button>
               </>
@@ -64,6 +65,7 @@ export default function DateForm({
           </Form.Group>
         </Form.Group>
       </Form>
+      </div>
     </>
   );
 }
