@@ -1,5 +1,6 @@
 import { Button } from "react-bootstrap";
 import LifeGrid from "./LifeGrid";
+import ShadowGrid from "./ShadowGrid";
 
 export default function Grid({
   birthDate,
@@ -62,6 +63,18 @@ export default function Grid({
   const thirteenth = getCard(first, fourth, sixth);
   const fourteenth = getCard(third, fifth, sixth);
 
+  // >>>>>>> SHADOW CARDS <<<<<<<
+
+  const A = getCard(first, fourth);
+  const B = getCard(second, fourth);
+  const C = getCard(second, fifth);
+  const D = getCard(third, fifth);
+  const E = getCard(fourth, sixth);
+  const F = getCard(fifth, sixth);
+  const G1 = getCard(B, F);
+  const G2 = getCard(C, D);
+  const H = getCard(A, E);
+
   return (
     <>
       {dateSubmitted ? (
@@ -88,6 +101,22 @@ export default function Grid({
             twelve={twelve}
             thirteenth={thirteenth}
             fourteenth={fourteenth}
+          />
+
+          <Button variant="light" onClick={handleGoToDateForm}>
+            Back do date
+          </Button>
+
+          <ShadowGrid
+            A={A}
+            B={B}
+            C={C}
+            D={D}
+            E={E}
+            F={F}
+            G1={G1}
+            G2={G2}
+            H={H}
           />
 
           <Button variant="light" onClick={handleGoToDateForm}>

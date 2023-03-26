@@ -99,7 +99,6 @@ const twentyOne = getCard(first, second, third, fourth, fifth, sixth)
     console.log(twentyOne);
  
 // >>>>>>> SHADOW CARDS <<<<<<<
-
 console.log('SHADOW');
 const A = getCard(first, fourth)
     console.log(A);

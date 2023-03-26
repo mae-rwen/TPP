@@ -15,10 +15,10 @@ $secondary: #401d3e;
 $info: #46404c;
 $dark: #29162a;
 
-// @import "./mediaQueries";
 @import "./TPP";
 @import "./dateForm";
-@import "./grid";
+@import "./lifeGrid";
+@import "./shadowGrid";
 @import "./singleCard";
 @import "./lifeCard";
 
