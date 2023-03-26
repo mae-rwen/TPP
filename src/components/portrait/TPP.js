@@ -1,7 +1,6 @@
 import DateForm from "./DateForm";
 import Grid from "./Grid";
 import { useRef, useState } from "react";
-import { Button } from "react-bootstrap";
 import TppHeader from "./TppHeader";
 import LifeCard from "./LifeCards";
 
@@ -16,6 +15,7 @@ export default function TPP() {
   const handleGoToPortrait = () => {
     goToPortrait.current?.scrollIntoView({ behavior: "smooth" });
   };
+ 
   // get life card
   const getLifeCard = () => {
     let num = birthDate

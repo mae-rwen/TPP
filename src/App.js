@@ -1,6 +1,5 @@
 import { Routes, Route } from "react-router-dom";
 import TPP from "./components/portrait/TPP";
-import { Container } from "react-bootstrap";
 import Footer from "./components/generalComponents/Footer";
 
 function App() {

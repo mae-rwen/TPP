@@ -10,6 +10,7 @@
   align-items: center;
   min-height: 100vh;
   justify-content: center;
+  margin-bottom: 3em;
   h4 {
     text-align: center;
     font-family: "FairyStrange";
@@ -26,7 +27,6 @@
     flex-direction: row;
     width: 65vw;
     align-items: center;
-    margin-top: 2em;
     gap: 1em;
     border: solid 1px $info;
     border-radius: 10%;
@@ -44,12 +44,12 @@
         &:nth-of-type(2n) {
           display: flex;
           flex-direction: row;
-          justify-content: space-around;         
+          justify-content: space-around;
         }
         &:nth-of-type(3n) {
           display: flex;
           flex-direction: row;
-          justify-content: space-evenly;     
+          justify-content: space-evenly;
         }
       }
       #position8 {
@@ -67,5 +67,34 @@
       gap: 7em;
       padding-top: 5em;
     }
-  }  
+  }
+}
+
+@media only screen and (max-width: 1050px) {
+  #gridSpan {
+    #lifeGrid {
+      width: 85vw;
+      padding: 3em 5em;
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  #gridSpan {
+    h4 {
+      font-size: small;
+    }
+    #lifeGrid {      
+      padding: 2em 2em;
+    }
+  }
+}
+
+@media only screen and (max-width: 290px) {
+  #gridSpan {
+    width: 130% ;
+    #lifeGrid {     
+    width: 90vw;
+    }
+  }
 }

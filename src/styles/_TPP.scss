@@ -1,23 +1,27 @@
 #tppHeader {
+  // border: $border1;
   background: linear-gradient(
     148deg,
     rgba(181, 150, 184, 1) 16%,
     rgba(177, 147, 183, 1) 48%,
     rgba(203, 170, 187, 1) 82%
   );
-  height: 100vh;
-  padding-left: 40vh;
-  padding-right: 40vh;
+  min-height: 100vh;
+  width: 100%; 
+  padding: 5em 20em;   
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 1em;  
+  margin-bottom: 3em;  
   h1,
   h3 {
+  //  border: $border2;
     font-family: "FairyStrange";
   }
   p {
+  //  border: $border3;
     text-align: center;
     padding-top: 1em;
     line-height: 1.75em;
@@ -28,5 +32,42 @@
   }
 }
 
+@media only screen and (max-width: 1000px) {
+  #tppHeader {    
+    padding: 5em 8em;
+    width: 105%; 
+    h3 {
+      font-size: 1.5em;
+    }
+}
+}
+
+@media only screen and (max-width: 620px) {
+  #tppHeader {    
+    padding: 3em 5em;   
+    h3 {
+      font-size: 1.5em;
+    }
+}
+}
+
+@media only screen and (max-width: 520px) {
+  #tppHeader {    
+    padding: 3em 3em;       
+    h3 {
+      font-size: 1em;
+    }
+}
+}
+
+@media only screen and (max-width: 300px) {
+  #tppHeader {    
+    padding: 3em 3em;
+    width: 130%;   
+    h3 {
+      font-size: 1em;
+    }
+}
+}
 
 
