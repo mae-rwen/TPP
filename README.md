@@ -1,6 +1,6 @@
 # Tarot Psychological Portrait
 
-## You can see the application at (http://tarot.maerwen.pl/)
+ - [You can see the application here](http://tarot.maerwen.pl/)
 
 Tarot psychological portrait (TPP for short) is the author's method of working with tarot, created by the well-known and respected Alla Alicja Chrzanowska.
 
@@ -10,4 +10,27 @@ This method is taught in workshops, and the meaning of each item is explained th
 
 The purpose of this application is to calculate individual portraits in an easy and fun way.
 
-### This project was bootstrapped with [Create React App](http://tarot.maerwen.pl/).
+## How does it work
+
+After entering the date of birth and confirming the form, the program calculates the life card for the user and his individual psychological portrait.
+
+In order to understand the meaning of each card and position, basic knowledge of tarot and the Tarot Psychological Portrait is required. 
+TPP is a method developed by a Polish tarot reader Alla Alicja Chrzanowska.
+
+## Features
+
+- portrait and life card are seen only after submiting the birthdate
+- after submiting the birthdate, changing it is only possible after resetting it
+- application is fully responsive (meant mostly for mobile view)
+
+## Authors
+
+- [@mae-rwen (Agata Thrams)](https://github.com/mae-rwen/)
+
+## Tech Stack
+
+React, Bootstrap, SCSS, JavaScript
+
+## Appendix
+
+Additional parts of TPP still to be added.
